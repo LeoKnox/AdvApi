@@ -43,6 +43,6 @@ namespace AdvApi.Controllers
         _context.Room.Add(roomItem);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(getTodoItem), new {id = ReadOnlyMemory.Id }, room.id }, room);
+        return CreatedAtAction(nameof(GetRoom), new {id = room.Id }, room);
     }
 }
