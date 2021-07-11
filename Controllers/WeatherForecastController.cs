@@ -36,4 +36,13 @@ namespace AdvApi.Controllers
             .ToArray();
         }
     }
+
+    [HttpPost]
+    public async Task<ActionResult<ReadOnlyMemory> AdvApi(Room room)
+    {
+        _context.Room.Add(roomItem);
+        await _context.SaveChangesAsync();
+
+        return CreatedAtAction(nameof(getTodoItem), new {id = ReadOnlyMemory.Id }, room.id }, room);
+    }
 }
