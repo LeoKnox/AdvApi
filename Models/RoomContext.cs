@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace RoomApi.Models
+namespace AdvApi.Models
 {
     public class RoomContext : DbContext
     {
@@ -8,6 +8,6 @@ namespace RoomApi.Models
         {
         }
 
-        public DbSet<RoomItem> RoomItems { get; set; }
+        public DbSet<Room> RoomItems { get; set; }
     }
 }
